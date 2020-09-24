@@ -31,8 +31,12 @@ const Stores = () => {
   return (
     <div>
       <Header as="h1" style={{ textAlign: "center" }}>
-        STORES
+        STORE
       </Header>
+      <Button color="yellow" as={Link} to={"/stores/new"}>
+        Add New Department
+      </Button>
+      <Header>Departments</Header>
       <Card.Group>{renderStores()}</Card.Group>
     </div>
   );
