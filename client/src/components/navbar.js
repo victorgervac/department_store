@@ -12,6 +12,9 @@ const NavBar = () => {
         <Link to="/thingsDemo">
           <Menu.Item style={styles.item}>Things</Menu.Item>
         </Link>
+        <Link to="/Stores">
+          <Menu.Item style={styles.item}>Store</Menu.Item>
+        </Link>
       </Menu>
     </div>
   );
@@ -19,7 +22,7 @@ const NavBar = () => {
 const styles = {
   navbar: {
     background: "gray",
-    padding: "10px",
+    padding: "8px",
   },
   item: {
     color: "black",

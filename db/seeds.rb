@@ -7,7 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require "faker"
 
-Thing.destroy_all
-5.times do |i|
-  Thing.create(name: Faker::Name.name)
+# Thing.destroy_all
+# 5.times do |i|
+#   Thing.create(name: Faker::Name.name)
+# end
+
+5.times do
+  s = Store.create(name: Faker::Commerce.department)
+20.times do 
+s.items.create(
+  name: Faker::Commerce.product_name,
+  description: Faker::TvShows::FamilyGuy.quote,
+  price: Faker::Commerce.price.to_f,)
+ end 
 end
